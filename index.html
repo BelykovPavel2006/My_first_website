@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru-ru" m_init="2233643202211221713">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="style/style.css">
+	<title>Document</title>
+	<style>
+		
+		
+.popup{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(1, 1, 1, 0.8);
+			top:0;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.popup:target{
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.popup_body{
+			min-height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+		}
+		.popup_content{
+			width: 15%;
+			position: relative;
+		}
+		
+
+		.popup_area{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top:0;
+			left:0;
+		}
+
+		.popup_form{
+			width: 300px;
+
+		}
+
+     .form_popup{
+		width: 300px;
+		 border-radius: 10%;
+       padding: 40px 20px;
+		text-align: center;
+		background-color: #808080;
+    
+
+}
+
+ .form_popup label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form_popup input{
+    display: block;
+    height: 43px;
+    width: 100%;
+    color:#fff;
+    border-radius: 20%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    border: none;
+    box-shadow: inset 2px 2px 5px #000,
+              inset -5px -5px 10px #ffffff;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+.form_popup h3{
+	font-size: 16px;
+}
+::placeholder{
+    color: #4b4e4d;
+    padding-left: 10px;
+}
+
+.button_popup{
+  width: 100%;
+  margin-top: 35px;
+  padding: 12px;
+  background: #696969;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 32px;
+ box-shadow: -4px -4px 7px #fffdfdb7,
+                3px 3px 5px rgba(94, 104, 121, 0.388);
+}
+.button_popup:hover{
+ box-shadow: inset -3px -3px 7px #ffffffb0, 
+       inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+}
+	</style>
+</head>
+<body>
+	
+		
+			<div class="container">
+    <header class=" menu d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <span>Logo</span>
+      </div>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+       <a style="margin-left: 2%;" href="#" >Home</a>
+        <a style="margin-left: 2%;" href="#" >Features</a>
+        <a style="margin-left: 2%;" href="#" >Pricing</a>
+        <a style="margin-left: 2%;" href="#" >FAQs</a>
+        <a style="margin-left: 2%;" href="#" >About</a>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        
+        <button onclick="window.location.href = '#popup';" type="button" class="btn btn-outline-light me-2">Login</button>
+      </div>
+    </header>
+  
+			
+			<heading class="heading">
+				<div class="head">
+					<h1 >Мой<br> первый сайт</h1>
+					<button class="btn btn-outline-light me-2" onclick="window.location.href = '#popup';"  >Кнопка</button>
+				</div>
+
+					
+			</heading>
+
+		<div class="social_networks " id="social_networks">
+			  
+		      <div class="social_networks_icons d-flex flex-column flex-md-row p-4  py-md-5 align-items-center justify-content-center">
+		      		
+
+		      		
+
+
+		      	</div>
+		      <div class="social_networks_text">
+		      	<p style="font-size: 20px;">Templates #18. More on Figma.info
+		      			<button onclick="window.location.href = '#popup';" style="margin-left: 80%;" class="btn btn-outline-light me-2">Заказать курс</button>
+		      	</p>
+
+		     
+		      </div>
+		</div>
+	
+      
+
+	
+
+	<footer class="footer">
+		
+
+		
+	</footer>
+		<div id="popup" class="popup">	
+			<div class="popup_body">
+				<a href="#cors" class="popup_area"></a>
+				 <div class="popup_content">
+				 	
+				 	<div class="popup_form">
+            
+				 		<form class="form_popup" >
+				 			<h3>Зарегистрироваться</h3>
+            <label for="username">Username</label>
+            <input type="text" placeholder="Email or Phone" id="username">
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password">
+
+             <button class="button_popup">Log In</button>
+
+            </form>
+				 	</div>
+				 </div>
+				</div>
+				</div>
+			</div>
+		</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
